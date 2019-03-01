@@ -1,0 +1,213 @@
+:root {
+    --red-text-color: #d11000;
+}
+
+div#vitrine {
+    display: inline-block;
+    border: 1px solid lightgrey;
+    padding: 0px;
+    padding-bottom: 10px;
+    max-height: 313px;
+    max-width: 800px;
+    border-radius: 6px;
+    box-shadow: 1px 1px lightgrey;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+div#vitrine div.head {
+    height: 34px;
+    vertical-align: middle;
+    /*text-align: center;*/
+    background: linear-gradient(to bottom, #eff7fe 50%, #e5f1fb 50%);
+}
+
+div#vitrine div.head label {
+    font-size: 15px;
+    font-weight: bolder;
+    position: relative;
+    top: 7.5px;
+    color: #146699;
+}
+
+div#vitrine div.head label:first-child {
+    left: 9px;
+}
+
+div#vitrine div.head label:last-child {
+    left: 75px;
+}
+
+div#vitrine div.body {
+    padding-bottom: 36px;
+    padding-top: 5px;
+
+    background: linear-gradient(to bottom, white 265px, #e5f1fb);
+}
+
+div.item {
+    display: inline-block;
+    border: none;
+    padding: 2px;
+    /*padding-right: 5px;*/
+    margin: 0 0 0 5px;
+    font-size: 11px;
+    line-height: 15px;
+    vertical-align: top;
+}
+
+div.item:hover {
+    background: linear-gradient(#d7eaf9, #d7eaf9, white);
+}
+
+div.item:hover > img {
+    border: 1px solid lightgray;
+}
+
+div.item > img {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid white;
+}
+
+div.item > img + label {
+    display: -webkit-box;
+    width: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: calc(20px * 3);
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+div.item > label {
+    display: block;
+    white-space: normal;
+}
+
+div.item > label:first-of-type {
+    margin-bottom: 4px;
+}
+
+div.item > label.de {
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: -1px;
+}
+
+div.item > label.de::before {
+    content: "De: ";
+}
+
+div.item > label.por {
+    font-weight: bolder;
+    font-size: 15px;
+    line-height: 17px;
+    vertical-align: bottom;
+
+}
+
+div.item > label.por::before {
+    content: "Por: ";
+    font-size: 11px;
+    font-weight: normal;
+}
+
+div.item > label.por,
+div.item > label.por ~ * {
+    color: var(--red-text-color);
+}
+
+div.item > label.info {
+    font-weight: bolder;
+    margin-bottom: -4px;
+    margin-top: -2px;
+}
+
+div.item::after {
+    content: "sem juros";
+    color: var(--red-text-color);
+}
+
+div#recommendations {
+    display: inline-block;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    max-width: 500px;
+    height: 244px;
+}
+
+div#recommendations::-webkit-scrollbar {
+    display: none;
+}
+
+div#reference {
+    display: inline-table;
+    border-right: 1px solid #f1f1f1;
+    padding-right: 5px;
+}
+
+div.body {
+    vertical-align: top;
+}
+
+div.body input[type=image] {
+    width: 16px;
+    height: auto;
+    position: relative;
+    bottom: 165px;
+}
+
+div.body input[type=image]#right {
+    left: 7px;
+}
+
+div.body input[type=image]:focus {
+    outline: 0;
+}
+
+div.left:not(.gradient), div.right:not(.gradient) {
+    display:inline-block;
+    height: 244px;
+    vertical-align: top;
+}
+
+div.left:not(.gradient) {
+    width: 15px;
+}
+
+div.right:not(.gradient) {
+    width: 25px;
+}
+
+div.gradient {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    height: 244px;
+    width: 20px;
+}
+
+div.gradient.left {
+    left: 19px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))
+}
+
+div.gradient.right {
+    right: 24px;
+    height: 244px;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))
+}
+
+div.spacer {
+    display: inline-block;
+    width: 15px;
+}
+
+.disabled {
+    cursor: default;
+    opacity: 0.6;
+}
+
+
